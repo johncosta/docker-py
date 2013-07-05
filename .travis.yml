@@ -1,0 +1,12 @@
+nguage: python
+python:
+  - "2.7"
+# command to install dependencies
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq linux-image-extra-`uname -r`
+install: 
+ - pip install requests
+ - pip install six
+
+# command to run tests
