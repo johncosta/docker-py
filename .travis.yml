@@ -4,9 +4,10 @@ python:
 # command to install dependencies
 before_install:
  - sudo apt-get update -qq
- - sudo apt-get install -qq linux-image-extra-virtual
+ - sudo apt-get install -qq linux-image-extra-virtual software-properties-common
+ - sudo add-apt-repository ppa:dotcloud/lxc-docker
 install: 
- - pip install requests
- - pip install six
+ - sudo pip install requests
+ - sudo pip install six
 
 # command to run tests
